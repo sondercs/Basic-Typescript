@@ -1,11 +1,11 @@
 interface Course {
-  name: string;
-  duration: number;
-  educator: string;
+  name: string; // COLOCA COMO OBRIGATÓRIO
+  duration?: number; // COLOCA COMO NÃO OBRIGATÓRIO
+  educator: string; // COLOCA COMO OBRIGATÓRIO
 }
 
 class CreateCourseService {
-  execute({ duration, name, educator }: Course) {
+  execute({ duration = 8, name, educator }: Course) {
     console.log(name, duration, educator);
   }
 }
